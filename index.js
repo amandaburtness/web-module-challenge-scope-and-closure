@@ -29,10 +29,17 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   
   1. What is the difference between counter1 and counter2?
   
+counter1 is a constant that represents a function. counter2 is a function itself.
+
   2. Which of the two uses a closure? How can you tell?
   
+counter1 uses a closure. It is using code that has been already identified, and is using it later. This would allow us to have memory.
+
   3. In what scenario would the counter1 code be preferable? In what scenario would 
      counter2 be better?  
+
+counter1 would be preferable if we wanted to store the games score (memory), and continue to add on to the points being made. counter2 would be good if we just wanted to log an incremented value once.      
+
 */
 
 // counter1 code
@@ -62,9 +69,11 @@ Use the inning function below to do the following:
 NOTE: This will be a callback function for the tasks below
 */
 
-function inning(/*Code Here*/){
-    /*Code Here*/
+function inning(){
+    return Math.floor(Math.random() * 3);
 }
+
+inning();
 
 
 /* ⚾️⚾️⚾️ Task 3: finalScore() ⚾️⚾️⚾️
@@ -81,17 +90,43 @@ Use the finalScore function below to do the following:
 }
 */ 
 
-function finalScore(/*code Here*/){
-  /*Code Here*/
+function finalScore(funct, numInnings){
+    let home = 0;
+    let away = 0;
+
+    for (let i = 0; i < numInnings; i++) {
+        home = home + funct();
+        away = away + funct();
+    }
+    let score = {
+      Home: home, 
+      Away: away
+    }
+    return score = { 
+      Home: home, 
+      Away: away
+    }
 }
+
+finalScore(inning, 9);
 
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
 Use the getInningScore() function below to do the following:
   1. Receive a callback function - you will pass in the inning function from task 2 as your argument 
   2. Return an object with a score for home and a score for away that populates from invoking the inning callback function */
 
-function getInningScore(/*Your Code Here */) {
-  /*Your Code Here */
+function getInningScore(funct) {
+  let home = 0;
+  let away = 0;
+
+  let score1 = {
+    Home: funct(),
+    Away: funct()
+  }
+  return score1 = {
+    Home: home,
+    Away: away
+  }
 }
 
 
@@ -136,8 +171,17 @@ Use the scoreboard function below to do the following:
 ]  
   */
 
-function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
+function scoreboard(funct1, funct2, numInnings) {
+  let home = 0;
+  let away = 0;
+
+  for (let i = 0; i < numInnings; i++) {
+    home = home + funct1();
+    away = away + funct1();
+  }
+  return scoreb = [ 
+    `Inning ${numInnings[i]}: Away ${away} - Home ${home}`
+  ]
 }
 
 
