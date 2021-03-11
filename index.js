@@ -29,10 +29,17 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   
   1. What is the difference between counter1 and counter2?
   
+counter1 is a constant that represents a function. counter2 is a function itself.
+
   2. Which of the two uses a closure? How can you tell?
   
+counter1 uses a closure. It is using code that has been already identified, and is using it later. This would allow us to have memory.
+
   3. In what scenario would the counter1 code be preferable? In what scenario would 
      counter2 be better?  
+
+counter1 would be preferable if we wanted to store the games score (memory), and continue to add on to the points being made. counter2 would be good if we just wanted to log an incremented value once.      
+
 */
 
 // counter1 code
@@ -62,9 +69,11 @@ Use the inning function below to do the following:
 NOTE: This will be a callback function for the tasks below
 */
 
-function inning(/*Code Here*/){
-    /*Code Here*/
+function inning(){
+    return Math.floor(Math.random() * 3);
 }
+
+inning();
 
 
 /* ⚾️⚾️⚾️ Task 3: finalScore() ⚾️⚾️⚾️
@@ -81,8 +90,11 @@ Use the finalScore function below to do the following:
 }
 */ 
 
-function finalScore(/*code Here*/){
-  /*Code Here*/
+function finalScore(funct, i){
+    let home = 0;
+    let away = 0;
+
+    
 }
 
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
