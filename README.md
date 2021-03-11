@@ -43,6 +43,9 @@ Find the file `index.js` and complete the tasks.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+
+Closure is where you can identify code somewhere else in your code, and use it later. It is also a way to store things in your code, like scores and things. it is the function and the loxical scope that goes along with it.
+
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -64,8 +67,16 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+
+closure is used with the function, and allowing them to act as const with differing names. You are able to use these separate name function to access the primary function. 
+
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+
+With the first time it is being called, it will always console log his name, but his dice roll could change. 
+
 c. What is the lexical scope of `newRoll`? 
+
+newRoll is passing information down to the console log of the string. 
 
 
 ### Task 3 - Stretch Goals
